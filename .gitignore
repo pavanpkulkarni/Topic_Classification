@@ -1,0 +1,7 @@
+*.json
+*.ipynb
+*.DS_Store
+**/.idea
+**/.ipynb_checkpoints
+*.p
+*.npy

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Classifiy Topic</h2>
+<form action="{{ url_for('tclassify') }}" method=post>
+
+    {{ form.key.label }}
+    {{ form.key }}
+
+    {{ form.submit }}
+    <br><br>
+    {{ form.topic_taxonomy }}
+
+</form>
+{% endblock %}
