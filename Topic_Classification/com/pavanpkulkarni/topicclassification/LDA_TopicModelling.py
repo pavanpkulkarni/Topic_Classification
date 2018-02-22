@@ -1,6 +1,5 @@
 
 import pickle
-from CreateLDAModelPickle import num_titles
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 
@@ -15,10 +14,18 @@ def print_topics(model, vectorizer, top_n=10):
         print("Topic %d : " % (idx))
         print([(vectorizer.get_feature_names()[i], topic[i]) for i in topic.argsort()[:-top_n - 1:-1]])
 
-print("\n\n LDA Model : ")
+
+# components_: array, [n_components, n_features]
+# Variational parameters for topic word distribution. Since the complete conditional for topic word distribution is a Dirichlet, components_[i, j] can be viewed as pseudocount that represents the number of times word j was assigned to topic i. It can also be viewed as distribution over the words for each topic after normalization
+# (http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.LatentDirichletAllocation.html)
+
+
+print("\n\n LDA Model (Word - Topic  Distribution) : ")
 print("=" * 20)
 print_topics(lda, vectorizer)
 print("=" * 20)
+
+print("\n\n Topic - Document Distribution :  ")
 
 text = ["Apple does not raise prices for black friday deals",
         "Mail carriers accuse USPS of faking Amazon delivery records so",

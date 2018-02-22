@@ -30,4 +30,4 @@ str = '''Researchers find "simple" way to hack Amazon Key '''
 
 AnalyzeText(str)
 
-
+#Question to prof : Do we need to submit the entities for all the titles from Mongo? or sample of top n titles will do?

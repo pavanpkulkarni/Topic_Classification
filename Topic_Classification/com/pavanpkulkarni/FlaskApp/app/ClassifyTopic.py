@@ -43,3 +43,17 @@ def tclassify():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+
+# output1 = classify_topics('Amazon CEO and world’s richest man Jeff Bezos avoids a common', model_word2vec)
+# print(output1)
+#
+# output2 = classify_topics('Researchers find "simple" way to hack Amazon Key', model_word2vec)
+# print(output2)
+#
+# output3 = classify_topics('Mail carriers: USPS supervisors warn Amazon customers will get', model_word2vec)
+# print(output3)
+#
+# output4 = classify_topics('Your New Mailman Works for Amazon', model_word2vec)
+# print(output4)

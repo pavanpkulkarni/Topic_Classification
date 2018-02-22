@@ -37,21 +37,3 @@ def classify_topics(input, vectors):
         sorted_max_score = sorted(max_value_score.items(), key=operator.itemgetter(1), reverse=True)[0]
         feed_score[sorted_max_score[0]] = sorted_max_score[1]
     return sorted(feed_score.items(), key=operator.itemgetter(1), reverse=True)[:3]
-
-
-
-
-
-
-
-# output1 = classify_topics('Amazon CEO and world’s richest man Jeff Bezos avoids a common', model_word2vec)
-# print(output1)
-#
-# output2 = classify_topics('Researchers find "simple" way to hack Amazon Key', model_word2vec)
-# print(output2)
-#
-# output3 = classify_topics('Mail carriers: USPS supervisors warn Amazon customers will get', model_word2vec)
-# print(output3)
-#
-# output4 = classify_topics('Your New Mailman Works for Amazon', model_word2vec)
-# print(output4)
